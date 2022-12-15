@@ -26,8 +26,13 @@ document.addEventListener('DOMContentLoaded', function() {
               type: 'bar'
             }
           ];
+		  
+		  var layout = {
+			  title: '',
+			  showlegend: false
+		  }
           
-          Plotly.newPlot('myDiv', data);
+          Plotly.newPlot('myDiv', data, layout, {displayModeBar : false});
         }
         reload.disabled = false
         reload.classList.remove('inactive')

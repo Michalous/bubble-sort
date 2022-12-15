@@ -10,6 +10,10 @@ canvas {
     border: 1px solid black;
 }
 
+.container {
+    max-width: 80%;
+}
+
 #reload {
     padding: 10px;
     font-size: 15px;

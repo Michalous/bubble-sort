@@ -13,6 +13,9 @@ document.addEventListener('DOMContentLoaded', function() {
       reload.onclick = main
 
       async function main() {
+        reload.disabled = true
+        reload.classList.add('inactive')
+        reload.innerHTML = "wait"
         for (var i = 0; i < listOfSorts.length; i++) {
           var toDraw = [...listOfSorts[i]]
           await sleep(100)
@@ -26,6 +29,9 @@ document.addEventListener('DOMContentLoaded', function() {
           
           Plotly.newPlot('myDiv', data);
         }
+        reload.disabled = false
+        reload.classList.remove('inactive')
+        reload.innerHTML = 'reload'
       }
       
       function sleep(ms) {

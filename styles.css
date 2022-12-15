@@ -12,7 +12,7 @@ canvas {
 }
 
 .container {
-    max-width: 80%;
+    max-width: 90%;
 }
 
 #reload {
@@ -22,4 +22,9 @@ canvas {
     color: aliceblue;
     border: none;
     border-radius: 12px;
+}
+
+#reload.inactive {
+    background-color: grey;
+    color: white;
 }
